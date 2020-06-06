@@ -23,8 +23,8 @@ weatherForm.addEventListener('submit', (event) => {
                 messageOne.textContent = data.error
             } else {
                 console.log(data)
-                messageOne.textContent = data.address
-                messageTwo.textContent = data.forecast.weather.temperature
+                messageOne.textContent = "It is " + data.forecast.weather.temperature + " degrees out there and it feels like " + data.forecast.weather.feelslike
+                messageTwo.textContent = "Wind speed is " + data.forecast.weather.wind_speed + ", also there is a " + data.forecast.weather.humidity + "% chance of precipitation"
             }
         })
     })
