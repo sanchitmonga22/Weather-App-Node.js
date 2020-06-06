@@ -3,6 +3,7 @@ const express = require("express");
 const hbs = require('hbs')
 const geocode = require('./utis/geocode')
 const forecast = require('./utis/forecast')
+const port = process.env.PORT || 3000;
 
 // To get the path of the current file in the system
 // console.log(__dirname)
@@ -106,6 +107,6 @@ app.get("*", (req, res) => {
     });
 })
 
-app.listen(3000, () => {
-    console.log("Server is up on 3000.");
+app.listen(port, () => {
+    console.log("Server is up on" + port);
 });
